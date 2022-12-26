@@ -7,15 +7,13 @@ install-dev:
 
 
 format:
-	black src/*.py && black tests/*.py	
+	black deeprec/*.py && black tests/*.py	
 
 
 lint:
-	pylint --disable=R,C src/*.py
+	pylint --disable=R,C deeprec/*.py
 
 
 test:
 	python -m pytest -vv --cov=tests tests
 
-
-all: install format lint test
